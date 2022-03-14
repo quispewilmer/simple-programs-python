@@ -37,7 +37,7 @@ for test_string in ['555-1212', 'ILL-EGAL']:
     else:
         print("It's not a valid phone number.")
 
-# Dictionaries
+# Dictionaries and Generator Expression
 prices = {'apple': 0.30, 'orange': 0.20}
 my_purchase = {
     'apple': 2,
@@ -80,3 +80,15 @@ hour = time_now.tm_hour
 for activity in sorted(activities.keys()):
     if hour < activity:
         print('The following activity at {0} is: {1}'.format(activity, activities[activity]))
+
+# Tripple quoted Strings
+REFRAIN = '''
+{0} bottles of coca-cola on the wall,
+{1} bottles of coca-cola,
+take one down, pass it around,
+{2} bottles of beer on the wall!
+'''
+bottles_of_beer = 9
+while bottles_of_beer > 1:
+    print(REFRAIN.format(bottles_of_beer, bottles_of_beer, bottles_of_beer - 1))
+    bottles_of_beer -= 1
